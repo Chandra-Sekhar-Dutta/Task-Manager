@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reminders</title>
+    <link rel="stylesheet" href="TODO.css">
+    <link rel="icon" type="image/x-icon" href="checklist.png">
+
+</head>
+
+<nav>
+    <ul>
+        <li><img src="schedule.svg.svg" alt=""><a href="#" id="timeTableLink">Schedule</a></li>
+        <li><img src="TODOicon.svg" alt=""><a href="#" id="toDoLink">My Reminders</a></li>
+        <li><img src="history.svg.svg" alt=""><a href="#" id="historyLink">History</a></li>
+    </ul>
+</nav>
+
+<body>
+    <!-- Form Section -->
+    <form id="text_Form">
+        <textarea placeholder="Add a task" cols="40" rows="3" name="task" id="task_Input"></textarea>
+        <button type="submit" id="addTaskButton">+</button>
+        <button type="button" id="analyzeButton"><img src="Analysis.svg" alt="">Analyze</button>
+    </form>
+
+    <!-- Table Section -->
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="Task_Body">
+            <tr>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Canvas for Chart -->
+    <div id="chartContainer">
+        <canvas id="analysisChart"></canvas>
+    </div>
+
+</body>
+
+<script type="module" src="Timetable.js"></script>
+<script type="module" src="TODO.js"></script>
+<script type="module" src="History.js"></script>
+<!-- Include Chart.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</html>

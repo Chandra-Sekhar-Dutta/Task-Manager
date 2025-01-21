@@ -1,0 +1,452 @@
+/* Global Styles */
+
+body {
+    background-color: #f7f9fc;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Title Styling */
+
+
+/* Navigation Bar Styling */
+
+nav {
+    height: 70px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    position: relative;
+}
+
+nav li a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav li img {
+    width: 40px;
+    /* Adjust as needed */
+    height: 40px;
+    /* Adjust as needed */
+    object-fit: contain;
+    /* Ensures the image fits well */
+    margin-right: 8px;
+    /* Space between image and text */
+    vertical-align: middle;
+    /* Align image with text */
+}
+
+nav li a:hover {
+    color: #0072f4;
+}
+
+nav li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4a90e2;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav li:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #4a90e2;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: fit-content;
+    text-align: center;
+    border-bottom: 4px solid #4a90e2;
+    letter-spacing: 1px;
+}
+
+
+/* Form Styling */
+
+#text_Form {
+    margin: 20px auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Textarea Styling */
+
+#task_Input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: border 0.2s ease;
+}
+
+#task_Input:focus {
+    border-color: #4a90e2;
+}
+
+
+/* Button Styling */
+
+button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3a7bc5;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+
+/* Table Styling */
+
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header Cells Styling */
+
+th {
+    padding: 15px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #357ab7;
+}
+
+
+/* Table Cells Styling */
+
+td {
+    padding: 15px 20px;
+    background-color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+
+/* Hover Effect for Rows */
+
+tr:hover td {
+    background-color: #f1f7ff;
+}
+
+
+/* Styling for Completed Task */
+
+td:last-child {
+    font-weight: bold;
+}
+
+
+/* Pending Button Styling */
+
+button.pending {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #e74c3c;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button.pending:hover {
+    background-color: #c0392b;
+}
+
+
+/* Completed Button Styling */
+
+button.completed {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #2ecc71;
+    background-color: #2ecc71;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button.completed:hover {
+    background-color: #27ae60;
+}
+
+
+/* Delete Button Styling */
+
+button.delete {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #e74c3c;
+    background-color: white;
+    color: #e74c3c;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+button.delete:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* canvadiv styling  */
+.chartContainer {
+    display: none;
+    margin-top: 10px; 
+    text-align: center; 
+}
+
+/* Canvas styling */
+.analysisChart {
+    margin-top: 10px;
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto; 
+    display: block;
+}
+
+
+
+/* Analyze Button Styling */
+#analyzeButton {
+    width: 150px; /* Increased width for image and text */
+    height: 50px; /* Slightly increased height for better spacing */
+    border: none;
+    border-radius: 25px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the image and text */
+    padding: 5px 15px;
+    margin-left: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#analyzeButton img {
+    width: 20px; /* Adjust image width */
+    height: 20px; /* Adjust image height */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#analyzeButton:hover {
+    background-color: #4a90e2;
+    transform: scale(1.05);
+}
+
+#analyzeButton:hover img {
+    transform: scale(1.2); /* Slightly enlarge the image on hover */
+    filter: brightness(1.2); /* Add brightness effect on hover */
+}
+
+#analyzeButton:active {
+    transform: scale(1);
+}
+
+
+
+/* Media Queries */
+
+
+/* Mobile Devices (max-width: 768px) */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        height: 50px;
+        padding: 5px 10px;
+    }
+    nav ul {
+        gap: 20px;
+    }
+    nav li a {
+        font-size: 16px;
+    }
+    #text_Form {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #task_Input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    table {
+        width: 100%;
+    }
+    th,
+    td {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* Tablet Devices (min-width: 769px) and (max-width: 1024px) */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        height: 60px;
+        padding: 10px 20px;
+    }
+    nav ul {
+        gap: 30px;
+    }
+    nav li a {
+        font-size: 18px;
+    }
+    #text_Form {
+        flex-direction: row;
+        gap: 10px;
+    }
+    #task_Input {
+        padding: 12px;
+        font-size: 16px;
+    }
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    table {
+        width: 90%;
+    }
+    th,
+    td {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+}
+
+
+/* Broad Screens (min-width: 1025px) */
+
+@media only screen and (min-width: 1025px) {
+    nav {
+        height: 70px;
+        padding: 15px 30px;
+    }
+    nav ul {
+        gap: 40px;
+    }
+    nav li a {
+        font-size: 20px;
+    }
+    #text_Form {
+        flex-direction: row;
+        gap: 15px;
+    }
+    #task_Input {
+        padding: 15px;
+        font-size: 18px;
+    }
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    table {
+        width: 80%;
+    }
+    th,
+    td {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+}

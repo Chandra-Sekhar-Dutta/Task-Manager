@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    background: url('checklist.png') no-repeat center center fixed; /* Adds the image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-color: rgba(247, 249, 252, 0.9); /* Adds a translucent overlay */
+    background-blend-mode: overlay; /* Blends the background color with the image */
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for perfect centering */
+    box-sizing: border-box;
+}
+
+/* Navigation Menu Styling */
+ul#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.85); /* Translucent white background */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Individual List Item Styling */
+ul#menu li {
+    position: relative;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+ul#menu li:hover {
+    background-color: #e0f3ff;
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* List Item Title Styling */
+ul#menu li strong {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out; /* Zoom effect on hover */
+}
+
+ul#menu li strong:hover {
+    transform: scale(1.1); /* Zooms in slightly */
+    color: #357ab7; /* Darker shade for hover */
+}
+
+/* List Item Description Styling */
+ul#menu li p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify; /* Aligns text for better readability */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+ul#menu li p:hover {
+    color: #333; /* Slightly darker text on hover */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+/* Mobile Devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    ul#menu {
+        max-width: 90%;
+        padding: 15px;
+        gap: 15px;
+    }
+    ul#menu li {
+        padding: 10px;
+    }
+    ul#menu li strong {
+        font-size: 18px;
+    }
+    ul#menu li p {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Devices (min-width: 769px) and (max-width: 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    ul#menu {
+        max-width: 80%;
+        padding: 20px;
+        gap: 20px;
+    }
+    ul#menu li {
+        padding: 15px;
+    }
+    ul#menu li strong {
+        font-size: 20px;
+    }
+    ul#menu li p {
+        font-size: 16px;
+    }
+}

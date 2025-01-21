@@ -1,0 +1,384 @@
+/* Global Styles */
+
+body {
+    background-color: #f7f9fc;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Navigation Bar */
+
+nav {
+    height: 70px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    position: relative;
+    margin: 0;
+}
+
+nav li a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav li img {
+    width: 40px;
+    /* Adjust as needed */
+    height: 40px;
+    /* Adjust as needed */
+    object-fit: contain;
+    /* Ensures the image fits well */
+    margin-right: 8px;
+    /* Space between image and text */
+    vertical-align: middle;
+    /* Align image with text */
+}
+
+nav li a:hover {
+    color: #0072f4;
+}
+
+
+/* Underline animation effect */
+
+nav li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4a90e2;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav li:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Table Styling */
+
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+
+/* Header Cells Styling */
+
+th {
+    padding: 15px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #357ab7;
+}
+
+
+/* Table Cells Styling */
+
+td {
+    padding: 15px 20px;
+    background-color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+
+/* Hover Effect for Rows */
+
+tr:hover td {
+    background-color: #f1f7ff;
+}
+
+
+/* Day Column Styling */
+
+td:first-child {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+
+/* Form and Textarea Styling */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.task_Input {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+textarea {
+    width: 70%;
+    max-width: 400px;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    resize: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+
+/* Button Group Styling */
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Optional: Adds space between buttons */
+}
+
+
+/* General Button Styling */
+
+button {
+    width: 40px;
+    height: 40px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #285a8e;
+}
+
+
+/* Add to To-Do Button Styling */
+
+.addToToDo {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.addToToDo img {
+    width: 60%;
+    height: 60%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.addToToDo:hover {
+    background-color: #4a90e2;
+    border-color: #357ab7;
+}
+
+.addToToDo:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1);
+}
+
+.addToToDo:active {
+    transform: scale(0.95);
+    background-color: #357ab7;
+    border-color: #285a8e;
+}
+
+
+/* Media Queries */
+
+
+/* Mobile Devices (max-width: 768px) */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        height: 50px;
+        padding: 5px 10px;
+    }
+    nav ul {
+        gap: 20px;
+    }
+    nav li a {
+        font-size: 16px;
+    }
+    table {
+        width: 100%;
+    }
+    th,
+    td {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    textarea {
+        width: 90%;
+    }
+    button {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .addToToDo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* Tablet Devices (min-width: 769px) and (max-width: 1024px) */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        height: 60px;
+        padding: 10px 20px;
+    }
+    nav ul {
+        gap: 30px;
+    }
+    nav li a {
+        font-size: 18px;
+    }
+    table {
+        width: 90%;
+    }
+    th,
+    td {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+    textarea {
+        width: 80%;
+    }
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .addToToDo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Broad Screens (min-width: 1025px) */
+
+@media only screen and (min-width: 1025px) {
+    nav {
+        height: 70px;
+        padding: 15px 30px;
+    }
+    nav ul {
+        gap: 40px;
+    }
+    nav li a {
+        font-size: 20px;
+    }
+    table {
+        width: 80%;
+    }
+    th,
+    td {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+    textarea {
+        width: 70%;
+    }
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    .addToToDo {
+        width: 50px;
+        height: 50px;
+    }
+}
